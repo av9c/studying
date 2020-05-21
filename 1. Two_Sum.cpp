@@ -4,9 +4,11 @@
 // Chalange Description                                                                     ///
 ///////////////////////////////////////////////////////////////////////////////////////////////
 /* Easy
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+Given an array of integers, return indices of the two numbers such that 
+they add up to a specific target.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You may assume that each input would have exactly one solution, 
+and you may not use the same element twice.
 
 Example:
 
@@ -16,7 +18,9 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 */
 
-// submissions:
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Submissions                                                                              ///
+///////////////////////////////////////////////////////////////////////////////////////////////
 /*
 twoSum_BruteForce:                      Runtime : 896 ms, Memory Usage :  9.3 MB
 twoSum_OnePassHashTableToModernCPP:     Runtime :  16 ms, Memory Usage : 10.3 MB (faster than 62.80 % and less than 29.70% of C++ online submissions for Two Sum)
@@ -35,11 +39,14 @@ using std::unordered_map;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 /*
 Approach 1: Brute Force
-The brute force approach is simple. Loop through each element xx and find if there is another value that equals to target - xtarget−x.
+The brute force approach is simple. Loop through each element xx and find if there is another 
+value that equals to target - xtarget−x.
+
 Complexity Analysis
 
 Time complexity : O(n^2)O(n2). 
-For each element, we try to find its complement by looping through the rest of array which takes O(n)O(n) time. 
+For each element, we try to find its complement by looping through the rest of array 
+which takes O(n)O(n) time. 
 Therefore, the time complexity is O(n^2)O(n2).
 
 Space complexity : O(1)O(1).
@@ -52,8 +59,6 @@ vector<size_t> twoSum_BruteForce( vector<int>& nums, int target ) {
                 return {i, j};
     return {}; // same as: return vector<int>();
 }
-
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Approach 2: Two-pass Hash Table. Time complexity : O(n)O(n). Space complexity : O(n)O(n). //
@@ -92,6 +97,7 @@ public int[] twoSum(int[] nums, int target) {
     }
     throw new IllegalArgumentException("No two sum solution");
 }
+
 Complexity Analysis:
 
 Time complexity : O(n)O(n). 
@@ -102,7 +108,6 @@ the time complexity is O(n)O(n).
 Space complexity : O(n)O(n). 
 The extra space required depends on the number of items 
 stored in the hash table, which stores exactly nn elements.
-
 */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -237,7 +242,6 @@ def twoSum(nums, target):
         seen[v] = i
     return []
 
-
 Complexity Analysis:
 
 Time complexity : O(n)O(n). 
@@ -247,6 +251,7 @@ Each look up in the table costs only O(1)O(1) time.
 Space complexity : O(n)O(n). 
 The extra space required depends on the number of items 
 stored in the hash table, which stores at most nn elements.
+
 */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
